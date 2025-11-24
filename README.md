@@ -19,10 +19,44 @@ Step 6: Plot the sequence with x-label and y-label with suitable title
 Step 7: Terminate the program.
 
 ## PROGRAM: 
-
+```
+clc; % clear screen
+ clear all; % clear screen
+ close all; % close all figure windows
+% INPUT SEQUENCE
+a=input('enter the starting x(n)');
+x=input('enter the x(n) sequence');
+n=a:1:length(x)+a-1;
+figure(1);
+stem(n,x);
+xlabel('time');
+ylabel('amplitude');
+title('input sequence');
+% IMPULSE SEQUENCE
+b=input('enter the starting h(n)');
+y=input('enter the h(n) sequence');
+m=b:1:length(y)+b-1;
+figure(2);
+stem(m,y);
+xlabel('time');
+ylabel('amplitude');
+title('impulse response')
+% LINEAR CONVOLUTION
+z=conv2(x,y);
+n1=a+b:1:length (z)+a+b-1;
+figure(3);
+stem(n1,z);
+xlabel('time');
+ylabel('amplitude');
+title('linear convolution');
+```
 
 ## OUTPUT:
 
+![WhatsApp Image 2025-11-24 at 21 48 05_cafd2b84](https://github.com/user-attachments/assets/82f4bcdc-6c86-4c09-8c0f-02c896c3934f)
 
 ## RESULT:
+
+![WhatsApp Image 2025-11-24 at 21 50 58_d5a5da21](https://github.com/user-attachments/assets/ea054b8c-fb90-43f2-8cd7-b9eec26e7c0d)
+
 
